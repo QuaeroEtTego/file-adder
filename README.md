@@ -54,7 +54,7 @@ See the key reference for more information on its behavior on different platform
 INPUT_PATH = "C:\\Users\\User\\Videos\\my_video.mp4"
 OUTPUT_PATH = "HOME_DIR\\super_video.mp4"
 ```
-`cargo clean && cargo build --release`
+`cargo clean && cargo build --release`\
 Launch the executable file located in `/target/release/file-adder.exe`
 ```
 file-adder v0.1.0

@@ -58,7 +58,7 @@ OUTPUT_PATH = "HOME_DIR\\super_video.mp4"
 Launch the executable file located in `/target/release/file-adder.exe`
 ```
 file-adder v0.1.0
-File C:\Users\User\my_video.mp4
+File C:\Users\User\super_video.mp4
 Do you want this file? [y/n]
 > y
 Created/opened the file.

@@ -1,0 +1,27 @@
+[package]
+name = "file-adder"
+version = "0.1.0"
+authors = ["Quaero_et_tego"]
+edition = "2021"
+rust-version = "1.70"
+description = "File adder"
+readme = "README.md"
+license = "MIT"
+license-file = "LICENSE.md"
+
+[dependencies]
+dirs = "5.0.1"
+
+[profile.release]
+codegen-units = 1
+lto = true
+strip = true
+panic = "abort"
+
+[profile.release.package."*"]
+codegen-units = 1
+strip = true
+
+[profile.release.build-override]
+codegen-units = 1
+strip = true

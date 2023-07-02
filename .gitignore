@@ -1,0 +1,8 @@
+### Default ###
+/target
+
+### CLion IDEA ###
+/.idea
+
+### Env File ###
+/.cargo/config.toml

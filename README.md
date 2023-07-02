@@ -5,12 +5,13 @@
 ![mit-badge](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Usage
-1. Clone this repository, rename `/.cargo/config.toml.example` to `/.cargo/config.toml`.
-2. Edit `config.toml`:
+1. Clone this repository.
+2. Rename `/.cargo/config.toml.example` to `/.cargo/config.toml`.
+3. Edit `config.toml`:
    * INPUT_PATH = `"<PATH_FILE_LOAD>"`
    * OUTPUT_PATH = `"<PATH_FILE_DELIVER>"`
-3. Compile the code `cargo build --release`
-4. Share the executable file (in `/target/release/ `)
+4. Compile the code `cargo build --release`
+5. Share the executable file (in `/target/release/`)
 
 ### Note
 Make sure to run `cargo clean` before each compilation (*E.g.* `cargo clean && cargo build --release`).\

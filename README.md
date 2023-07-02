@@ -19,7 +19,7 @@ File-adder doesn't check the env variable `OUTPUT_PATH`, so you need to make sur
 If you're on Windows, `\` is `\\` in the env variables for path.
 
 ## Shortcut paths
-File-adder use [dirs](https://crates.io/crates/dirs) to support shortcuts paths.
+File-adder use [dirs](https://crates.io/crates/dirs) to support shortcut paths.
 
 | Key              | Reference                                                                    |
 |:-----------------|:-----------------------------------------------------------------------------|

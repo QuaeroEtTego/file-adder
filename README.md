@@ -14,7 +14,7 @@
 
 ### Note
 Make sure to run `cargo clean` before each compilation (*E.g.* `cargo clean && cargo build --release`).\
-If you're on Windows, `\ ` is `\\` in the env variables for path.
+If you're on Windows, `\` is `\\` in the env variables for path.
 
 ## Shortcut paths
 File-adder use [dirs](https://crates.io/crates/dirs) to support shortcuts paths.

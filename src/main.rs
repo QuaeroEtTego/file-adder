@@ -1,7 +1,7 @@
 use std::{
     env,
     fs::{create_dir_all, File},
-    io::{Read, Write},
+    io::{Read, Result as IoResult, Write},
     process::ExitCode,
 };
 
@@ -22,12 +22,12 @@ fn main() -> ExitCode {
 
     if let Err(e) = real_main() {
         eprintln!("{e}");
+        let _ = wait();
+
         return ExitCode::FAILURE;
     }
 
-    println!("Press ENTER to leave...");
-    let buffer = &mut [0u8];
-    let _ = std::io::stdin().read_exact(buffer);
+    let _ = wait();
 
     ExitCode::SUCCESS
 }
@@ -80,4 +80,10 @@ fn real_main() -> Result<(), Error> {
     println!("All data have been written in the file.");
 
     Ok(())
+}
+
+fn wait() -> IoResult<()> {
+    println!("Press ENTER to leave...");
+    let buffer = &mut [0u8];
+    std::io::stdin().read_exact(buffer)
 }

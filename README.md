@@ -14,6 +14,7 @@
 
 ### Note
 Make sure to run `cargo clean` before each compilation (*E.g.* `cargo clean && cargo build --release`).\
+File-adder doesn't check the env variable `OUTPUT_PATH`, so you need to make sure it's correct.\
 If you're on Windows, `\` is `\\` in the env variables for path.
 
 ## Shortcut paths

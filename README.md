@@ -1,24 +1,28 @@
 # file-adder
+
 `file-adder` loads a file **during compilation** to deliver it to the target path at runtime.
 
 ![GitHub top language](https://img.shields.io/github/languages/top/QuaeroEtTego/file-adder)
 ![mit-badge](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Usage
+
 1. Clone this repository.
 2. Rename `/.cargo/config.toml.example` to `/.cargo/config.toml`.
 3. Edit `config.toml`:
-   * INPUT_PATH = `"<PATH_FILE_LOAD>"`
-   * OUTPUT_PATH = `"<PATH_FILE_DELIVER>"`
+    * INPUT_PATH = `"<PATH_FILE_LOAD>"`
+    * OUTPUT_PATH = `"<PATH_FILE_DELIVER>"`
 4. Compile the code `cargo build --release`
 5. Share the executable file (in `/target/release/`)
 
 ### Note
+
 Make sure to run `cargo clean` before each compilation (*E.g.* `cargo clean && cargo build --release`).\
 File-adder doesn't check the env variable `OUTPUT_PATH`, so you need to make sure it's correct.\
 If you're on Windows, `\` is `\\` in the env variables for path.
 
 ## Shortcut paths
+
 File-adder use [dirs](https://crates.io/crates/dirs) to support shortcut paths.
 
 | Key              | Reference                                                                    |
@@ -46,18 +50,23 @@ File-adder use [dirs](https://crates.io/crates/dirs) to support shortcut paths.
 (E.g. (Windows) OUTPUT_PATH = `"HOME_DIR\\my_video.mp4"`)
 
 ### Note
+
 Shortcut is **only supported on the `OUTPUT_PATH` env variable**.
 See the key reference for more information on its behavior on different platforms.
 
 ## Example
+
 `/.cargo/config.toml`
+
 ```toml
 [env]
 INPUT_PATH = "C:\\Users\\User\\Videos\\my_video.mp4"
 OUTPUT_PATH = "HOME_DIR\\super_video.mp4"
 ```
+
 `cargo clean && cargo build --release`\
 Launch the executable file located in `/target/release/file-adder.exe`
+
 ```
 file-adder v0.1.0
 File C:\Users\User\super_video.mp4
@@ -67,15 +76,19 @@ Created/opened the file.
 All data have been written in the file.
 Press ENTER to leave...
 ```
+
 If a file already exists in the same output path, file-adder asks whether it should be overwritten or not.
+
 ```
 File exists, overwrite it? [y/n]
 > n
 ```
 
 ## Supported Rust Versions
+
 File-adder supports a MSRV (minimum supported rust version) of Rust 1.70.
 File-adder version is not guaranteed to build on Rust versions earlier than the minimum supported version.
 
 ## License
+
 This project is licensed under the [MIT](LICENSE.md) license.
